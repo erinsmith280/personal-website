@@ -1,0 +1,224 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    color: #2d2d2d;
+    background-color: #fafafa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base layout */
+main {
+    padding: 60px 40px 60px;
+    display: flex;
+    gap: 60px;
+}
+
+.sidebar-left {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.sidebar-link {
+    display: block;
+    font-size: 0.9375rem;
+    color: #2d2d2d;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 40px 20px 40px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .sidebar-left {
+        width: 100%;
+    }
+}
+
+/* Two-column layout */
+.page-layout {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-column {
+    flex: 1;
+    max-width: 650px;
+}
+
+.photos-column {
+    width: 280px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.photos-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .photos-column {
+        width: 100%;
+        position: static;
+    }
+    
+    .content-column {
+        max-width: 100%;
+    }
+}
+
+/* Remove old intro section styles */
+.intro-section {
+    display: block;
+}
+
+.intro-section .headshot {
+    display: none;
+}
+
+.intro-section .intro-text {
+    display: block;
+}
+
+.intro-section .intro-text h1 {
+    text-align: left;
+}
+
+/* Remove old headshot styles */
+.headshot {
+    display: none;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+    color: #000;
+    text-align: left;
+}
+
+.intro {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+h2 {
+    font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1875rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+    color: #000;
+}
+
+p {
+    margin-bottom: 0.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+}
+
+/* Links */
+a {
+    color: #2d2d2d;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.2);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s ease;
+}
+
+a:hover {
+    text-decoration-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Lists */
+ul {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    max-width: 650px;
+}
+
+li {
+    margin-bottom: 0.35rem;
+    line-height: 1.7;
+    font-size: 0.9375rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+li::marker {
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    html {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.125rem;
+    }
+    
+    p {
+        font-size: 1.0625rem;
+    }
+    
+    .headshot img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* Selection */
+::selection {
+    background-color: #e6f3ff;
+    color: #000;
+}

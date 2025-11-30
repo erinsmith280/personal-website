@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="sidebar-left">
+  <a href="{{ get_url(path='@/_index.md') }}" class="sidebar-link">Home</a>
+  <a href="{{ get_url(path='@/library/_index.md') }}" class="sidebar-link">Library</a>
+</div>
+
+<div class="page-layout">
+  <div class="content-column">
+    <h1>Welcome! I'm Erin.</h1>
+    
+    <p class="intro">I invest at <a href="https://www.parablevc.com/" target="_blank" rel="noopener noreferrer">Parable</a>, partnering with founders as they build their magnum opus in consumer and prosumer AI.</p>
+    
+    <h2>Adventures</h2>
+    
+    <p>In the past, I've:</p>
+    
+    <ul>
+      <li>Scaled scientific moonshots at Schmidt Futures (funding frontier research and building high-risk science programs, Policy Entrepreneurs Network, and philanthropic funds).</li>
+      <li>Built FacePrint, emotion AI for early detection of neurodegenerative disorders. Moved to SF at 18 to spin it out. Startup failed—best education.</li>
+      <li>Conducted computational neuroscience research at Stanford, UCSF, MIT, Harvard, Weizmann Institute and apprenticed in dementia and movement disorder clinics.</li>
+      <li>Cultivated communities of founders and technologists as Interact Fellowship Retreat Director and policy entrepreneurs as PEN co-founder.</li>
+      <li>Given talks at MIT Media Lab, WIRED Health, Smithsonian, United Nations General Assembly Science Summit, European Patent Office, countless schools and more.</li>
+      <li>Studied Symbolic Systems at Stanford (computer science, philosophy, linguistics, neuroscience, psychology).</li>
+      <li>Started in my first official lab at ten after years experimenting in my childhood kitchen lab (beginning with the biochemistry of yogurt).</li>
+      <li>Grew up middle child of five in Kansas, raised by a single mom—learned to be scrappy and root for underdogs.</li>
+    </ul>
+    
+    <p>Whether through Mahler, brain imaging, or delightful user experiences, I'm drawn to ideas and people that spark awe.</p>
+    
+    <p>I respond to cold emails and believe in people early. I love nerding out with people who pair ambition with earnestness, imagination with pragmatism, and curiosity with kindness.</p>
+    
+    <p>I've met some of my favorite people through <a href="https://joininteract.com/" target="_blank" rel="noopener noreferrer">Interact</a>, <a href="https://thielfellowship.org/" target="_blank" rel="noopener noreferrer">Thiel Fellowship</a>, <a href="https://www.ycombinator.com/" target="_blank" rel="noopener noreferrer">YC</a>, and <a href="https://www.cee.org/programs/research-science-institute" target="_blank" rel="noopener noreferrer">RSI</a>. I believe the best is still ahead.</p>
+    
+    <h2>Contact</h2>
+    
+    <p>You can reach me at erin [at] parablevc [.] com or on Twitter <a href="https://twitter.com/erinwildtype" target="_blank" rel="noopener noreferrer">@erinwildtype</a>.</p>
+  </div>
+  
+  <div class="photos-column">
+    <img src="{{ get_url(path='all_photos.jpg') }}" alt="Photo collage">
+  </div>
+</div>
+{% endblock %}
